@@ -291,7 +291,7 @@
       nombre.innerHTML = `${iniciado}`
       var contenido = document.querySelector('#CuerpoCanciones') 
             contenido.innerHTML = ""
-            fetch('http://127.0.0.1:3000/cancion')
+            fetch('https://proyecto-2-backend.herokuapp.com/cancion')
             .then(response => response.json())
             .catch(error => {
             console.log(error)
@@ -358,7 +358,7 @@
                 'youtube': youtube       
              }
             console.log(objeto)
-            fetch('http://127.0.0.1:3000/cancion', {
+            fetch('https://proyecto-2-backend.herokuapp.com/cancion', {
             method: 'POST',
             body: JSON.stringify(objeto),
             headers:{
@@ -384,7 +384,7 @@
         function MostrarCanciones(){
             var contenido = document.querySelector('#CuerpoCanciones') 
             contenido.innerHTML = ""
-            fetch('http://127.0.0.1:3000/cancion')
+            fetch('https://proyecto-2-backend.herokuapp.com/cancion')
             .then(response => response.json())
             .catch(error => {
             console.log(error)
@@ -412,7 +412,7 @@
               pdf.text(20,20,"Reporte - Canciones en el sistema");
               var data = [];
               var columns = ["No.", "Nombre", "Artista", "Album", "Fecha"];
-              fetch('http://127.0.0.1:3000/cancion')
+              fetch('https://proyecto-2-backend.herokuapp.com/cancion')
             .then(response => response.json())
             .catch(error => {
             console.log(error)

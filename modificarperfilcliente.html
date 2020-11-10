@@ -238,7 +238,7 @@
             var iniciado = sessionStorage.usuario
             nombre.innerHTML = `${iniciado}`
             console.log(id)
-            fetch(`http://127.0.0.1:3000/usuarios/${iniciado}`)
+            fetch(`https://proyecto-2-backend.herokuapp.com/usuarios/${iniciado}`)
                 .then(response => response.json())
                 .catch(error => {
                     console.log(error)
@@ -265,7 +265,7 @@
                 'usuario': usuario,
                 'password': password
             }
-            fetch(`http://127.0.0.1:3000/usuarios/${iniciado}`, {
+            fetch(`https://proyecto-2-backend.herokuapp.com/usuarios/${iniciado}`, {
                 method: 'PUT',
                 body: JSON.stringify(datos),
                 headers:{

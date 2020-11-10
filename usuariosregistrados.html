@@ -281,7 +281,7 @@
       nombre.innerHTML = `${iniciado}`
       var contenido = document.querySelector('#cuerpoUsuarios') 
             contenido.innerHTML = ""
-            fetch('http://127.0.0.1:3000/usuarios')
+            fetch('https://proyecto-2-backend.herokuapp.com/usuarios')
             .then(response => response.json())
             .catch(error => {
             console.log(error)
@@ -304,7 +304,7 @@
 
     function eliminarUsuario(usuario){
           var usuario = usuario.value
-          fetch(`http://127.0.0.1:3000/usuarios/${usuario}`, {
+          fetch(`https://proyecto-2-backend.herokuapp.com/usuarios/${usuario}`, {
         method: 'DELETE',
         }).then(res => res.json())
         .catch(error => {
@@ -336,7 +336,7 @@ var data = [];
 
 var columns = ["No.", "Nombre", "Apellido", "Usuario"];
 
-fetch('http://127.0.0.1:3000/usuarios')
+fetch('https://proyecto-2-backend.herokuapp.com/usuarios')
 .then(response => response.json())
 .catch(error => {
 console.log(error)
